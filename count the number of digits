@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int n;
+   cin>>n;
+   int count=0,r=0;
+   while(n!=0)
+   {
+      count=count+1;
+      n=n/10;
+   }
+cout<<count;
+    return 0;
+}
+time complexity- O(no of digits)
+ //method 2
+ #include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+   int n;
+   cin>>n;
+int k=0;
+k=floor(log10(n)+1);
+cout<<k;
+    return 0;
+}
+ time complexity-O(1)
