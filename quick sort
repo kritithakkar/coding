@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+void swap(int *a,int *b)
+{
+    int t=*a;
+    *a=*b;
+    *b=t;
+}
+int partition(int arr[],int l,int h)
+{
+    int p=arr[h];
+    int i=(l-1);
+    for(int j=l;j<=h;j++)
+    {
+        if(arr[j]<p)
+        {
+            i++;
+            swap(&arr[i],&arr[j]);
+        }
+    }
+    swap(&arr[i+1],&arr[h]);
+    return (i+1);
+}
+void quick(int arr[],int l,int h)
+{
+    if(l<h)
+    {
+        int pi=partition(arr,l,h);
+        quick(arr,l,pi-1);
+        quick(arr,pi+1,h);
+        
+    }
+}
+void print(int arr[],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    quick(arr,0,n-1);
+    cout<<"array:"<<endl;
+    print(arr,n);
+    return 0;
+}
