@@ -1,0 +1,45 @@
+#include <stdlib.h> 
+#include <assert.h> 
+#include<stdio.h>  
+struct Node 
+{ 
+    int data; 
+    struct Node* next; 
+}; 
+  
+void push(struct Node** head_ref, int new_data) 
+{ 
+      struct Node* new_node=(struct Node*)malloc(sizeof(struct Node));
+      new_node->data=new_data;
+      new_node->next=(*head_ref);
+      (*head_ref)=new_node;
+} 
+  
+int NthElement(struct Node* head,  
+                  int index) 
+{ 
+     int count=1;
+     if(count==index)
+     return head->data;
+     return NthElement(head->next,index-1);
+    //Fill your code
+} 
+
+int main() 
+{ 
+    
+  struct Node* head=NULL;
+  int n;
+  printf("Enter number of nodes:");
+  scanf("%d",&n);
+  int x;
+ for(int i=0;i<n;i++)
+ {
+     scanf("%d",&x);
+     push(&head,x);
+ }
+  int j;
+  printf("Enter the position to find the element:");
+  scanf("%d",&j);
+  printf("The element is %d",NthElement(head,j));
+}
