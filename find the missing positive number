@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Question {
+
+	static int solution(int[] A,int n) 
+    { 
+        boolean[] present = new boolean[n + 1]; 
+ 
+        for (int i = 0; i < n; i++) { 
+
+            if (A[i] > 0 && A[i] <= n) 
+                present[A[i]] = true; 
+        } 
+        for (int i = 1; i <= n; i++) 
+            if (!present[i]) 
+                return i; 
+        return n + 1; 
+    } 
+  
+    public static void main(String[] args) 
+    { 
+  
+    	@SuppressWarnings("resource")
+		Scanner sc=new Scanner(System.in);
+    	int n=sc.nextInt();
+       int[] arr=new int[n];
+        for(int i=0;i<n;i++)
+        {
+         arr[i]=sc.nextInt();
+        }
+        System.out.println(solution(arr,n)); 
+    } 
+} 
