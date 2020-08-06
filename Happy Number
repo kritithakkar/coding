@@ -1,0 +1,38 @@
+
+import java.util.*;
+public class Main
+{
+    static boolean happy(int n)
+    {
+        if(n==1|| n==7)
+       return true;
+        int sum=n,x=n;
+        while(sum>9)
+{
+    sum=0;
+    while(x>0)
+    {
+        int f=x%10;
+        sum+=f*f;
+        x/=10;
+    }
+if(sum==1)
+return true;
+x=sum;
+}
+if(x==7)
+return true;
+return false;
+    }
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		if(happy(n))
+		{
+		    System.out.println("Happy Number");
+		}
+		else
+		System.out.println("Not Happy Number");
+	}
+}
+
