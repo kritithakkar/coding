@@ -4,8 +4,43 @@ k = 2
 => 1329 
 
 Maitaining digits in ascending order from most scientific bit produces the least possible no. 
-
-
+Case -- 1 (No zeros)
+Draw a graph diagram
+for eg 3 7 2 1 8 1
+                   8
+     7
+3        2
+             1            1
+             
+*MSD has more weightage 
+if k=1 and 8 is biggest number and we remove it then it will create 3 7 2 1 1 which is not smallest 
+so we will remove 7 and number formed will be 3 2 1 8 1 
+we don't care about the height of the drip we just check that when the graph drips it creates an maxima
+ so if we see a maxima then it will have higher weightage than the other one
+ now if k=2
+ 1st is removed 
+ *always remove the 1st peak as it has the highest weightage 
+             8
+ 3
+    2 
+        1         1
+        here we will remove 3 as now it is the first drip 
+        ans- 2 1 8 1 
+Case -- 2(with zeroes)
+1 2 3 0 9 8 7 
+k=2  
+                      9
+                            8
+                                  7
+         3
+    2
+1  
+               0
+                
+      output - 1 0 9 8  7
+      first peak is at 3 remove 3'
+    then at 2 remove 2
+    
 class Solution {
 public:
     string removeKdigits(string num, int k) {
