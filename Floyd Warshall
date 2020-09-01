@@ -1,3 +1,5 @@
+//to find the shortest path
+*shortest distance of node to itself will always be  0
 #include<bits/stdc++.h>
 using namespace std;
 
