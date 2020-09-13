@@ -1,0 +1,23 @@
+//using set
+n=int(input())
+inp=[]
+inp2=[]
+for i in range(0,n):
+    lst=int(input())
+    inp.append(lst)
+for i in range(0,n):
+    lo=int(input())
+    inp2.append(lo)
+print(list(set(inp)&set(inp2)))
+
+//using intersection
+n=int(input())
+inp=[]
+inp2=[]
+for i in range(0,n):
+    lst=int(input())
+    inp.append(lst)
+for i in range(0,n):
+    lo=int(input())
+    inp2.append(lo)
+print(set(inp).intersection(inp2))
