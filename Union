@@ -1,0 +1,55 @@
+//combine two list into one using +
+n=int(input())
+inp=[]
+inp2=[]
+for i in range(0,n):
+    lst=int(input())
+    inp.append(lst)
+for i in range(0,n):
+    lo=int(input())
+    inp2.append(lo)
+print(inp+inp2)
+
+
+//combine two list into one while sorted using sorted
+n=int(input()) 
+inp=[]
+inp2=[]
+for i in range(0,n):
+    lst=int(input())
+    inp.append(lst)
+for i in range(0,n):
+    lo=int(input())
+    inp2.append(lo)
+print(sorted(inp+inp2))
+
+
+//without repetition using set
+n=int(input())
+inp=[]
+inp2=[]
+for i in range(0,n):
+    lst=int(input())
+    inp.append(lst)
+for i in range(0,n):
+    lo=int(input())
+    inp2.append(lo)
+print(set(inp+inp2))
+ 
+ 
+ //adding more than 2 list using set and union 
+ n=int(input())
+inp=[]
+inp2=[]
+inp3=[]
+for i in range(0,n):
+    lst=int(input())
+    inp.append(lst)
+for i in range(0,n):
+    lo=int(input())
+    inp2.append(lo)
+for i in range(0,n):
+    lop=int(input())
+    inp3.append(lop)
+pp=list(set().union(inp,inp2,inp3))
+print(pp)
