@@ -1,0 +1,22 @@
+def Sorting(lst):
+    lst2 = sorted(lst, key=len)
+    return lst2
+
+n=int(input())
+inp=[]
+for i in range(0,n):
+    lst=input()
+    inp.append(lst)
+print(Sorting(inp))
+
+//2nd method
+def Sorting(lst):
+    lst.sort(key=len)
+    return lst  
+    
+n=int(input())
+inp=[]
+for i in range(0,n):
+    lst=input()
+    inp.append(lst)
+print(Sorting(inp))
