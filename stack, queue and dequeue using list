@@ -1,0 +1,49 @@
+//stack work on first in last out
+n=int(input())
+inp=[]
+for i in range(0,n):
+    lst=int(input())
+    inp.append(lst)
+inp.append(1)
+inp.append(2)
+print(inp)
+inp.pop()
+print(inp)
+
+//queue works on first in first out
+n=int(input())
+inp=[]
+for i in range(0,n):
+    lst=input()
+    inp.append(lst)
+inp.append("hello")
+inp.append("bye")
+print(inp)
+inp.pop(0)
+print(inp)
+
+//deque
+import collections
+# Create a deque
+deque_colors = collections.deque(["Red","Green","White"])
+print(deque_colors)
+# Append to the left
+print("\nAdding to the left: ")
+deque_colors.appendleft("Pink")
+print(deque_colors)
+# Append to the right
+print("\nAdding to the right: ")
+deque_colors.append("Orange")
+print(deque_colors)
+# Remove from the right
+print("\nRemoving from the right: ")
+deque_colors.pop()
+print(deque_colors)
+# Remove from the left
+print("\nRemoving from the left: ")
+deque_colors.popleft()
+print(deque_colors)
+# Reverse the dequeue
+print("\nReversing the deque: ")
+deque_colors.reverse()
+print(deque_colors)
