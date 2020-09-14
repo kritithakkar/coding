@@ -1,0 +1,13 @@
+lists=[]
+n=int(input())
+for i in range(0,n):
+    lst=int(input())
+    lists.append(lst)
+l=int(input())    
+r=int(input())
+count=0
+for x in lists:
+    if x>=l and x<=r:
+        count+=1
+print(count)
+    
