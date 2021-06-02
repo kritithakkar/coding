@@ -1,0 +1,66 @@
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+public static void main(String args[])
+{
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int arr[]=new int[n];
+    int arr1[]=new int[30];
+    int arr2[]=new int[30];
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=sc.nextInt();
+    }
+    int m=0,k=0;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]%2==0)
+        {
+        arr1[m]=arr[i];
+        m++;
+    }
+    else{
+        arr2[k]=arr[i];
+        k++;
+    }
+    }
+    for(int i=0;i<m;i++)
+    {
+        System.out.print(arr1[i]+" ");
+    }
+    System.out.println();
+    for(int i=0;i<k;i++)
+    {
+        System.out.print(arr2[i]);
+    }
+    System.out.println();
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<m-i-1;j++)
+        {
+            if(arr1[j]<arr1[j+1])
+            {
+                int temp=arr1[j];
+                arr1[j]=arr1[j+1];
+                arr1[j+1]=temp;
+            }
+        }
+    }
+    for(int i=0;i<k;i++)
+    {
+        for(int j=0;j<k-i;j++)
+        {
+            if(arr2[j]<arr2[j+1])
+            {
+                int temp=arr2[j];
+                arr2[j]=arr2[j+1];
+                arr2[j+1]=temp;
+            }
+        }
+    }
+    int sum=arr1[1]+arr2[1];
+    System.out.println(sum);
+}
+}
