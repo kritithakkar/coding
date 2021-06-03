@@ -5,6 +5,10 @@ public class Main
 		Scanner sc=new Scanner(System.in);
 		int a=sc.nextInt();
 		int b=sc.nextInt();
+		if(a==0)
+		System.out.print(b);
+		if(b==0)
+		System.out.print(a);
 		while(a!=b)
 		{
 		    if(a>b)
